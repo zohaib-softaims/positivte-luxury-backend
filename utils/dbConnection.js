@@ -10,7 +10,7 @@ const connectDB = async () => {
     return;
   }
   try {
-    const connection = await mongoose.connect(process.env.MONGO_URL, clientOptions);
+    const connection = await mongoose.connect(process.env.DOKKU_MONGO_AQUA_URL, clientOptions);
     isConnected = connection.connections[0].readyState;
     console.log(`MongoDB Connected: ${connection.connection.host}`);
   } catch (error) {
