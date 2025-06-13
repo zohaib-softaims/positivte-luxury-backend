@@ -63,6 +63,7 @@ export const chatHandlers = (io, socket) => {
         content: llmResponse,
       });
     } catch (error) {
+      console.log("llm error", error);
       console.error("LLM processing error:", error);
       const fallbackResponse = JSON.stringify({
         content: "⚠️ Sorry, something went wrong while processing your request. Please try again.",
